@@ -37,7 +37,7 @@ class CityMiddleware
             $city_data = City::query()->where('slug', '=', $city)->firstOrFail();
             session(['city' => $city_data]);
         }
-
+        //для дальнейшей обработки
         return $next($request);
     }
 }
